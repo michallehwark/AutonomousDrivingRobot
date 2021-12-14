@@ -52,9 +52,11 @@ def getLaneCurve(img, display = 2): #display=0(displays nothing), display=1(disp
         cv2.imshow('ImageStack', imgStacked)
     elif display == 1:
         cv2.imshow('Resutlt', imgResult)
+
+    # check values of the curve and normalise them
     curve = curve/100
     if curve > 1 : curve == 1
-    if curve < -1: curve == -1
+    if curve < -1 : curve == -1
 
     #cv2.imshow('Treshhold', imgThresh)
     #cv2.imshow('Warp', imgWarp)
